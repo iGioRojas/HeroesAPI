@@ -5,7 +5,8 @@ import { HeroesComponent } from './pages/heroes/heroes.component';
 
 const routes: Routes = [
   {path:'heroes', component:HeroesComponent},
-  {path:'detalles', component:DetallesComponent}
+  {path:'detalles', component:DetallesComponent},
+  {path:'**', pathMatch:'full', redirectTo:'heroes'} //REDIRECT A DEFAULT PAGE
 ];
 
 @NgModule({
