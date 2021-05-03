@@ -12,6 +12,10 @@ export class HeroesService {
     this.cargarHeroes();
   }
 
+  detalles(id:string){
+    return this.http.get(`https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id/${id}.json`);
+  }
+  
   cargarHeroes(){
     return this.http.get('https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json')
     
@@ -19,4 +23,6 @@ export class HeroesService {
       this.heroes = res;
     })
   }
+
+
 }
